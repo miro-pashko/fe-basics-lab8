@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="keywords" content="Пашко Мирослав, ІП-41, лабораторна робота 8, HTML5, CSS3, верстка, адаптивний дизайн, Locksmith">
+    <meta name="description" content="Лабораторна робота №8: верстка адаптивного сайту Locksmith за зразком (варіант 21)">
+    <meta name="author" content="Пашко Мирослав Павлович">
+    <title>Пашко М. П., ІП-41, ЛР-8, Варіант 21</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700&family=Rajdhani:wght@500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- ===== Header ===== -->
+    <header class="site-header">
+        <div class="container header-inner">
+            <a class="logo" href="#home">Locksmith</a>
+
+            <button class="nav-toggle" type="button" aria-label="Open menu" aria-expanded="false" aria-controls="main-nav">
+                <span></span><span></span><span></span>
+            </button>
+
+            <nav class="main-nav" id="main-nav" aria-label="Main menu">
+                <ul>
+                    <li><a class="active" href="#home">Home</a></li>
+                    <li><a href="#why">About</a></li>
+                    <li><a href="#services">Services</a></li>
+                    <li><a href="#shop">Shop</a></li>
+                    <li><a href="#pages">Pages</a></li>
+                    <li><a href="#news">News</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+                <a class="btn btn-phone btn-phone--menu" href="tel:+1234567890">1234 5678 90</a>
+            </nav>
+
+            <a class="btn btn-phone btn-phone--header" href="tel:+1234567890">1234 5678 90</a>
+        </div>
+    </header>
+
+    <main id="home">
+
+        <!-- ===== Hero ===== -->
+        <section class="hero" aria-roledescription="carousel" aria-label="Main offers">
+            <button class="hero-arrow hero-arrow--prev" type="button" aria-label="Previous slide">
+                <svg viewBox="0 0 24 24" width="14" height="14" aria-hidden="true"><path d="M15 4 7 12l8 8" fill="none" stroke="#fff" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </button>
+            <button class="hero-arrow hero-arrow--next" type="button" aria-label="Next slide">
+                <svg viewBox="0 0 24 24" width="14" height="14" aria-hidden="true"><path d="m9 4 8 8-8 8" fill="none" stroke="#fff" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </button>
+
+            <div class="hero-card" aria-live="polite">
+                <p class="eyebrow" id="hero-eyebrow">Best Locksmith</p>
+                <h1 id="hero-title">We Provide Best Locksmith Services All Over World</h1>
+                <a class="btn btn-yellow" href="#contact">Contact us</a>
+            </div>
+        </section>
+
+        <!-- ===== Quote bar ===== -->
+        <div class="container quote-wrap" id="contact">
+            <form class="quote-bar" id="quote-form" novalidate>
+                <h2 class="quote-title">Get a quote</h2>
+                <label class="visually-hidden" for="q-name">Name</label>
+                <input class="field" type="text" id="q-name" name="name" placeholder="Name" autocomplete="name">
+                <label class="visually-hidden" for="q-phone">Phone</label>
+                <input class="field" type="tel" id="q-phone" name="phone" placeholder="Phone" autocomplete="tel">
+                <label class="visually-hidden" for="q-service">Services</label>
+                <select class="field field-select" id="q-service" name="service">
+                    <option value="" selected>Services</option>
+                    <option>Locksmith Services</option>
+                    <option>Safes &amp; Locks</option>
+                    <option>Access Control</option>
+                    <option>Security Doors</option>
+                    <option>Alarm System</option>
+                    <option>Video Surveillance</option>
+                </select>
+                <button class="btn btn-navy" type="submit">Get a quote</button>
+                <p class="form-status" id="form-status" role="status"></p>
+            </form>
+        </div>
+
+        <!-- ===== Services ===== -->
+        <section class="services" id="services">
+            <div class="container">
+                <header class="section-head section-head--center">
+                    <p class="eyebrow">Our services</p>
+                    <h2 class="section-title">Services we offer</h2>
+                    <span class="rule" aria-hidden="true"></span>
+                </header>
+
+                <div class="services-grid">
+                    <article class="service">
+                        <img src="img/service-locksmith.png" width="88" height="88" alt="" loading="lazy">
+                        <div>
+                            <h3>Locksmith Services</h3>
+                            <p>Quis ipsum suspendisse ultrices gravida. Risus commodo viverra maecenas accumsan lacus vel facilisis.</p>
+                        </div>
+                    </article>
+                    <article class="service">
+                        <img src="img/service-safes.png" width="88" height="88" alt="" loading="lazy">
+                        <div>
+                            <h3>Safes &amp; Locks</h3>
+                            <p>Quis ipsum suspendisse ultrices gravida. Risus commodo viverra maecenas accumsan lacus vel facilisis.</p>
+                        </div>
+                    </article>
+                    <article class="service">
+                        <img src="img/service-access.png" width="91" height="88" alt="" loading="lazy">
+                        <div>
+                            <h3>Access Control</h3>
+                            <p>Quis ipsum suspendisse ultrices gravida. Risus commodo viverra maecenas accumsan lacus vel facilisis.</p>
+                        </div>
+                    </article>
+                    <article class="service">
+                        <img src="img/service-doors.png" width="88" height="88" alt="" loading="lazy">
+                        <div>
+                            <h3>Security Doors</h3>
+                            <p>Quis ipsum suspendisse ultrices gravida. Risus commodo viverra maecenas accumsan lacus vel facilisis.</p>
+                        </div>
+                    </article>
+                    <article class="service">
+                        <img src="img/service-alarm.png" width="91" height="88" alt="" loading="lazy">
+                        <div>
+                            <h3>Alarm System</h3>
+                            <p>Quis ipsum suspendisse ultrices gravida. Risus commodo viverra maecenas accumsan lacus vel facilisis.</p>
+                        </div>
+                    </article>
+                    <article class="service">
+                        <img src="img/service-video.png" width="88" height="88" alt="" loading="lazy">
+                        <div>
+                            <h3>Video Surveillance</h3>
+                            <p>Quis ipsum suspendisse ultrices gravida. Risus commodo viverra maecenas accumsan lacus vel facilisis.</p>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <!-- ===== Why choose us ===== -->
+        <section class="why" id="why">
+            <div class="why-top">
+                <div class="container">
+                    <div class="why-card">
+                        <div class="why-images">
+                            <img class="why-img why-img--camera" src="img/why-camera.jpg" width="182" height="200" alt="Security dome camera" loading="lazy">
+                            <img class="why-img why-img--door" src="img/why-door.jpg" width="182" height="199" alt="Door handle with an electronic lock" loading="lazy">
+                            <img class="why-img why-img--keypad" src="img/why-keypad.jpg" width="182" height="413" alt="A hand holding a key fob near a keypad" loading="lazy">
+                        </div>
+
+                        <div class="why-text">
+                            <p class="eyebrow">Why choose us</p>
+                            <h2 class="section-title">Why choose us?</h2>
+                            <span class="rule" aria-hidden="true"></span>
+                            <p class="why-lead">Consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Quis ipsum suspendisse ultrices gravida lacus vel facilisis.</p>
+                            <ul class="checklist">
+                                <li>Safes &amp; Safe Deposit Boxes</li>
+                                <li>Car Locksmith &amp; Car Alarm Systems</li>
+                                <li>Residential Locksmith &amp; Commercial Locksmith</li>
+                                <li>We Are Awesome People To Meet</li>
+                                <li>Digital &amp; Electronic Lock</li>
+                            </ul>
+                            <a class="btn btn-navy" href="#contact">Get a quote</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="stats">
+                <div class="container stats-grid">
+                    <div class="stat">
+                        <img src="img/stat-customers.png" width="45" height="39" alt="" loading="lazy">
+                        <p class="stat-number">25k+</p>
+                        <p class="stat-label">Happy Customers</p>
+                    </div>
+                    <div class="stat">
+                        <img src="img/stat-branch.png" width="40" height="39" alt="" loading="lazy">
+                        <p class="stat-number">16</p>
+                        <p class="stat-label">World Wide Branch</p>
+                    </div>
+                    <div class="stat">
+                        <img src="img/stat-project.png" width="35" height="39" alt="" loading="lazy">
+                        <p class="stat-number">28k+</p>
+                        <p class="stat-label">Project Complete</p>
+                    </div>
+                    <div class="stat">
+                        <img src="img/stat-award.png" width="39" height="39" alt="" loading="lazy">
+                        <p class="stat-number">36</p>
+                        <p class="stat-label">Award Winner</p>
+                    </div>
+                    <div class="stat">
+                        <img src="img/stat-products.png" width="39" height="39" alt="" loading="lazy">
+                        <p class="stat-number">74k+</p>
+                        <p class="stat-label">Products sold</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ===== Store ===== -->
+        <section class="store" id="shop">
+            <div class="container">
+                <header class="section-head section-head--row">
+                    <div>
+                        <p class="eyebrow">Our products</p>
+                        <h2 class="section-title">Locksmith store</h2>
+                        <span class="rule" aria-hidden="true"></span>
+                    </div>
+                    <a class="btn btn-outline" href="#shop">View all</a>
+                </header>
+
+                <div class="products">
+                    <article class="product">
+                        <div class="product-photo"><img src="img/product-1.jpg" width="146" height="146" alt="CCTV camera" loading="lazy"></div>
+                        <p class="product-row"><span class="price">$55.0</span><span class="stars" aria-label="5 out of 5 stars">★★★★★</span></p>
+                        <p class="product-name">Riusmod tempor incid</p>
+                    </article>
+                    <article class="product">
+                        <div class="product-photo"><img src="img/product-2.jpg" width="146" height="146" alt="Door lock set" loading="lazy"></div>
+                        <p class="product-row"><span class="price">$55.0</span><span class="stars" aria-label="5 out of 5 stars">★★★★★</span></p>
+                        <p class="product-name">Riusmod tempor incid</p>
+                    </article>
+                    <article class="product">
+                        <div class="product-photo"><img src="img/product-3.jpg" width="146" height="146" alt="Combination cable lock" loading="lazy"></div>
+                        <p class="product-row"><span class="price">$55.0</span><span class="stars" aria-label="5 out of 5 stars">★★★★★</span></p>
+                        <p class="product-name">Riusmod tempor incid</p>
+                    </article>
+                    <article class="product">
+                        <div class="product-photo"><img src="img/product-4.jpg" width="147" height="146" alt="Fireproof safe box" loading="lazy"></div>
+                        <p class="product-row"><span class="price">$55.0</span><span class="stars" aria-label="5 out of 5 stars">★★★★★</span></p>
+                        <p class="product-name">Riusmod tempor incid</p>
+                    </article>
+                    <article class="product">
+                        <div class="product-photo"><img src="img/product-5.jpg" width="146" height="146" alt="Smart door lock" loading="lazy"></div>
+                        <p class="product-row"><span class="price">$55.0</span><span class="stars" aria-label="5 out of 5 stars">★★★★★</span></p>
+                        <p class="product-name">Riusmod tempor incid</p>
+                    </article>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <div class="container">
+            <p>© 2026 Locksmith. Лабораторна робота №8, варіант 21 — Пашко М. П., ІП-41.</p>
+        </div>
+    </footer> 
+</body>
+</html>
