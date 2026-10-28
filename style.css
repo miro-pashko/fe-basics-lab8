@@ -1,4 +1,4 @@
-/* Лабораторна робота №8, варіант 21: сайт Locksmith */
+/* Лабораторна робота №8, варіант 21: сайт Locksmith (адаптивна верстка) */
 
 :root {
     --yellow: #ffc446;
@@ -665,3 +665,259 @@ h1, h2, h3, p {
     color: #8b94a3;
 }
 
+/* ===================== Адаптивність ===================== */
+
+@media (max-width: 1100px) {
+    .main-nav ul {
+        gap: 24px;
+    }
+}
+
+/* Планшети: меню-бургер */
+@media (max-width: 900px) {
+    .container {
+        width: 92%;
+    }
+
+    .header-inner {
+        position: relative;
+    }
+
+    .nav-toggle {
+        display: block;
+        order: 3;
+    }
+
+    .btn-phone--header {
+        order: 2;
+        margin: 0 8px 0 auto;
+    }
+
+    .main-nav {
+        position: absolute;
+        top: 100%;
+        left: -4%;
+        right: -4%;
+        display: none;
+        padding: 8px 4% 18px;
+        background-color: #ffffff;
+        box-shadow: 0 14px 24px rgba(27, 40, 57, 0.12);
+    }
+
+    .main-nav.open {
+        display: block;
+    }
+
+    .main-nav ul {
+        flex-direction: column;
+        gap: 0;
+    }
+
+    .main-nav li + li {
+        border-top: 1px solid #eeeeee;
+    }
+
+    .main-nav a {
+        padding: 12px 0;
+        font-size: 15px;
+    }
+
+    .main-nav a.active::after {
+        right: auto;
+        width: 28px;
+        bottom: 8px;
+    }
+
+    .quote-title {
+        flex-basis: 100%;
+        margin-right: 0;
+    }
+
+    .field {
+        flex: 1 1 140px;
+    }
+
+    .services-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .why-card {
+        gap: 30px;
+    }
+
+    .why-text {
+        padding-right: 10px;
+    }
+}
+
+/* Великі телефони і малі планшети */
+@media (max-width: 768px) {
+    .hero {
+        aspect-ratio: auto;
+        min-height: 430px;
+        padding: 40px 4% 80px;
+    }
+
+    .hero-card {
+        width: 100%;
+        max-width: 540px;
+        padding: 28px 18px 30px;
+    }
+
+    .hero-card h1 {
+        font-size: 30px;
+    }
+
+    .hero-arrow {
+        width: 52px;
+        height: 52px;
+    }
+
+    .hero-arrow--prev {
+        left: -26px;
+        padding-right: 11px;
+    }
+
+    .hero-arrow--next {
+        right: -26px;
+        padding-left: 11px;
+    }
+
+    .section-title,
+    .why-text .section-title {
+        font-size: 27px;
+    }
+
+    .services {
+        padding: 70px 0 56px;
+    }
+
+    .why-top {
+        padding-top: 56px;
+        background: linear-gradient(to bottom, var(--grey-bg) 40%, var(--navy) 40%);
+    }
+
+    .why-card {
+        grid-template-columns: 1fr;
+    }
+
+    .why-text {
+        padding: 0 8px 12px;
+    }
+
+    .stats {
+        padding: 56px 0;
+    }
+
+    .stats-grid {
+        row-gap: 38px;
+    }
+
+    .stat {
+        flex: 0 0 33.333%;
+    }
+
+    .store {
+        padding: 64px 0 70px;
+    }
+}
+
+@media (max-width: 700px) {
+    .products {
+        grid-template-columns: repeat(3, 1fr);
+        gap: 16px;
+    }
+}
+
+@media (max-width: 480px) {
+    .products {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+/* Телефони */
+@media (max-width: 600px) {
+    .btn-phone--header {
+        display: none;
+    }
+
+    .main-nav .btn-phone--menu {
+        display: inline-flex;
+        margin-top: 14px;
+    }
+
+    .hero {
+        min-height: 400px;
+    }
+
+    .hero-card h1 {
+        font-size: 26px;
+    }
+
+    .quote-bar {
+        padding: 22px 16px;
+    }
+
+    .quote-title {
+        font-size: 26px;
+    }
+
+    .field {
+        flex-basis: 100%;
+        height: 40px;
+    }
+
+    .quote-bar .btn {
+        width: 100%;
+        height: 42px;
+    }
+
+    .services-grid {
+        grid-template-columns: 1fr;
+        gap: 30px;
+    }
+
+    .section-head--row {
+        flex-direction: column;
+    }
+
+    .stat {
+        flex: 0 0 50%;
+    }
+
+    .stat-number {
+        font-size: 32px;
+    }
+
+    .why-card {
+        padding: 10px;
+    }
+
+    .why-images {
+        gap: 10px;
+    }
+}
+
+@media (max-width: 380px) {
+    .logo {
+        font-size: 25px;
+    }
+
+    .service img {
+        width: 72px;
+    }
+
+    .service {
+        gap: 14px;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    html {
+        scroll-behavior: auto;
+    }
+
+    * {
+        transition: none !important;
+    }
+}
